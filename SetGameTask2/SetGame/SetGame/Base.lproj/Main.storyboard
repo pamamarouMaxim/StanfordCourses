@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="JVw-2V-vcq">
+    <device id="retina5_9" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="sEw-Ei-OaW">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dti-ML-bEj" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <navigationController id="JVw-2V-vcq" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="dhX-aZ-Qhh">
+                        <rect key="frame" x="0.0" y="44" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="UpD-w4-z4O"/>
+                    </connections>
+                </navigationController>
+            </objects>
+            <point key="canvasLocation" x="-649" y="132"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="SetGame" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="E5T-Sm-9oB">
+                                <rect key="frame" x="16" y="670.33333333333337" width="343" height="121.66666666666663"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KqM-fW-rok">
+                                        <rect key="frame" x="6.6666666666666572" y="5.6666666666666288" width="331" height="110.33333333333333"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iji-YU-qOt">
+                                                <rect key="frame" x="0.0" y="6.6666666666666288" width="197" height="98.333333333333329"/>
+                                                <subviews>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="9" translatesAutoresizingMaskIntoConstraints="NO" id="f36-oL-CnH">
+                                                        <rect key="frame" x="15.666666666666671" y="5" width="167" height="88.333333333333329"/>
+                                                        <subviews>
+                                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ag3-dU-cRw">
+                                                                <rect key="frame" x="0.0" y="0.0" width="49.666666666666664" height="88.333333333333329"/>
+                                                                <color key="backgroundColor" red="0.93310481309890747" green="0.9701654314994812" blue="0.30783650279045105" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                <userDefinedRuntimeAttributes>
+                                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                                        <integer key="value" value="4"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                </userDefinedRuntimeAttributes>
+                                                            </view>
+                                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="f2k-Ap-NZ9">
+                                                                <rect key="frame" x="58.666666666666671" y="0.0" width="49.666666666666671" height="88.333333333333329"/>
+                                                                <color key="backgroundColor" red="0.93310481309890747" green="0.9701654314994812" blue="0.30783650279045105" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                <userDefinedRuntimeAttributes>
+                                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                                        <integer key="value" value="4"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                </userDefinedRuntimeAttributes>
+                                                            </view>
+                                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="S9J-JM-J2y">
+                                                                <rect key="frame" x="117.33333333333333" y="0.0" width="49.666666666666671" height="88.333333333333329"/>
+                                                                <color key="backgroundColor" red="0.93310481309890747" green="0.9701654314994812" blue="0.30783650279045105" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                <userDefinedRuntimeAttributes>
+                                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                                        <integer key="value" value="4"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                </userDefinedRuntimeAttributes>
+                                                            </view>
+                                                        </subviews>
+                                                    </stackView>
+                                                </subviews>
+                                                <color key="backgroundColor" red="0.36508017778396606" green="0.80677753686904907" blue="0.56021666526794434" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="bottom" secondItem="f36-oL-CnH" secondAttribute="bottom" constant="5" id="8ZE-Dl-0wj"/>
+                                                    <constraint firstItem="f36-oL-CnH" firstAttribute="top" secondItem="iji-YU-qOt" secondAttribute="top" constant="5" id="CsO-Je-igw"/>
+                                                    <constraint firstAttribute="width" secondItem="iji-YU-qOt" secondAttribute="height" multiplier="18:9" id="J4q-yS-kNh"/>
+                                                    <constraint firstItem="f36-oL-CnH" firstAttribute="top" secondItem="iji-YU-qOt" secondAttribute="top" constant="5" id="SPt-jZ-zzo"/>
+                                                    <constraint firstItem="f36-oL-CnH" firstAttribute="leading" secondItem="iji-YU-qOt" secondAttribute="leading" constant="15" id="VqK-Ov-cp1"/>
+                                                    <constraint firstAttribute="bottom" secondItem="f36-oL-CnH" secondAttribute="bottom" constant="5" id="a33-vl-R3B"/>
+                                                    <constraint firstAttribute="trailing" secondItem="f36-oL-CnH" secondAttribute="trailing" constant="15" id="obN-sv-c6D"/>
+                                                </constraints>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.borderRadius">
+                                                        <integer key="value" value="7"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </view>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="n9N-Ii-cvw">
+                                                <rect key="frame" x="207" y="6.6666666666666288" width="100" height="98.333333333333329"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pow-aI-mLI">
+                                                        <rect key="frame" x="0.0" y="0.0" width="100" height="49.333333333333336"/>
+                                                        <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="16"/>
+                                                        <state key="normal" title="Find set">
+                                                            <color key="titleColor" red="1" green="0.24114965720000001" blue="0.2434536044" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="findSetButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="f5V-Fp-qAJ"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="characterWrap" translatesAutoresizingMaskIntoConstraints="NO" id="FQq-rN-WAQ">
+                                                        <rect key="frame" x="0.0" y="49.333333333333371" width="100" height="49"/>
+                                                        <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="16"/>
+                                                        <state key="normal" title="Add 3  cards">
+                                                            <color key="titleColor" red="1" green="0.24114965720000001" blue="0.2434536044" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        </state>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                                <integer key="value" value="5"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
+                                                                <integer key="value" value="2"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="color" keyPath="layer.borderColor">
+                                                                <color key="value" red="0.98023837804794312" green="0.91063535213470459" blue="0.30291730165481567" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                        <connections>
+                                                            <action selector="addCardsButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="8zw-m3-Jf2"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                        <color key="backgroundColor" red="0.36508017778396606" green="0.80677753686904907" blue="0.56021666526794434" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstItem="n9N-Ii-cvw" firstAttribute="centerY" secondItem="KqM-fW-rok" secondAttribute="centerY" id="FmC-BO-WjA"/>
+                                            <constraint firstItem="n9N-Ii-cvw" firstAttribute="height" secondItem="KqM-fW-rok" secondAttribute="height" multiplier="0.9" id="IoS-ki-HsR"/>
+                                            <constraint firstAttribute="width" secondItem="KqM-fW-rok" secondAttribute="height" multiplier="60:20" id="KS3-au-bEr"/>
+                                            <constraint firstItem="iji-YU-qOt" firstAttribute="centerY" secondItem="KqM-fW-rok" secondAttribute="centerY" id="eaw-OG-e2J"/>
+                                            <constraint firstItem="iji-YU-qOt" firstAttribute="leading" secondItem="KqM-fW-rok" secondAttribute="leading" id="r86-My-Kvw"/>
+                                            <constraint firstItem="n9N-Ii-cvw" firstAttribute="leading" secondItem="iji-YU-qOt" secondAttribute="trailing" constant="10" id="um8-dY-NQZ"/>
+                                            <constraint firstItem="iji-YU-qOt" firstAttribute="height" secondItem="KqM-fW-rok" secondAttribute="height" multiplier="0.9" id="vV9-zx-AQA"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" red="0.36508017778396606" green="0.80677753686904907" blue="0.56021666526794434" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstItem="KqM-fW-rok" firstAttribute="height" secondItem="E5T-Sm-9oB" secondAttribute="height" multiplier="0.9" id="POc-gI-ErE"/>
+                                    <constraint firstItem="KqM-fW-rok" firstAttribute="centerX" secondItem="E5T-Sm-9oB" secondAttribute="centerX" id="V6H-0G-YeE"/>
+                                    <constraint firstItem="KqM-fW-rok" firstAttribute="centerY" secondItem="E5T-Sm-9oB" secondAttribute="centerY" id="iU6-ZV-0vi"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="20"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="b5T-p1-bik">
+                                <rect key="frame" x="16" y="88" width="343" height="568.33333333333337"/>
+                                <subviews>
+                                    <view contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="Q89-zF-zh1">
+                                        <rect key="frame" x="0.0" y="0.0" width="343" height="568.33333333333337"/>
+                                        <color key="backgroundColor" red="0.68506723642349243" green="0.24347275495529175" blue="0.70190989971160889" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.bordeWidth">
+                                                <integer key="value" value="-5"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="lqyer.borderColor">
+                                                <color key="value" red="0.1796228289604187" green="0.22763857245445251" blue="0.81564873456954956" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.68506723642349243" green="0.24347275495529175" blue="0.70190989971160889" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="E5T-Sm-9oB" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="0pJ-F7-2df"/>
+                            <constraint firstItem="b5T-p1-bik" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="B2o-6n-cxg"/>
+                            <constraint firstAttribute="bottom" secondItem="E5T-Sm-9oB" secondAttribute="bottom" constant="20" id="MIy-ai-VAi"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="E5T-Sm-9oB" secondAttribute="trailing" constant="16" id="euM-eb-IZU"/>
+                            <constraint firstItem="E5T-Sm-9oB" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.15" id="gWr-Ov-Rwl"/>
+                            <constraint firstItem="b5T-p1-bik" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.7" id="iqx-1G-hJh"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="b5T-p1-bik" secondAttribute="trailing" constant="16" id="kkY-4z-JgU"/>
+                            <constraint firstItem="b5T-p1-bik" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="sd6-RC-cUa"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="vPP-G6-LVX">
+                        <barButtonItem key="rightBarButtonItem" title="New game" id="vAr-aw-xpZ"/>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="tableOfGameView" destination="Q89-zF-zh1" id="tAb-ho-bGV"/>
+                        <outletCollection property="selectedСardViews" destination="Ag3-dU-cRw" collectionClass="NSMutableArray" id="QJp-sg-MvT"/>
+                        <outletCollection property="selectedСardViews" destination="f2k-Ap-NZ9" collectionClass="NSMutableArray" id="I54-Dh-2Eu"/>
+                        <outletCollection property="selectedСardViews" destination="S9J-JM-J2y" collectionClass="NSMutableArray" id="WIh-Ut-9th"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="208.80000000000001" y="131.52709359605913"/>
+        </scene>
+    </scenes>
+</document>

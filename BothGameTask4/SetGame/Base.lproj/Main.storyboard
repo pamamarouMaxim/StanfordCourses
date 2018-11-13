@@ -1,0 +1,593 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="jMw-gx-gtP">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="Stack View standard spacing" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Tab Bar Controller-->
+        <scene sceneID="3MR-Ky-otv">
+            <objects>
+                <tabBarController id="jMw-gx-gtP" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Vuh-xc-a4f">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="sdd-v8-vjd" kind="relationship" relationship="viewControllers" id="DKH-XN-gue"/>
+                        <segue destination="J6N-GN-JMn" kind="relationship" relationship="viewControllers" id="myv-tX-uG8"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ysk-XQ-T25" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-4327" y="-548"/>
+        </scene>
+        <!--Сhoose a game-->
+        <scene sceneID="0Gd-bT-NdD">
+            <objects>
+                <tableViewController storyboardIdentifier="SelectThemeTableViewController" clearsSelectionOnViewWillAppear="NO" id="f0K-Kt-K1h" customClass="SelectThemeTableViewController" customModule="SetGame" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="Ch6-MT-QXl">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="reuseIdentifier" id="XGU-Kh-msA">
+                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="XGU-Kh-msA" id="oib-Rr-VNs">
+                                    <rect key="frame" x="0.0" y="0.0" width="341" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="7UT-fs-5Vg" kind="showDetail" identifier="ChooseGameSegue" trigger="accessoryAction" id="x82-1X-76N"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="f0K-Kt-K1h" id="1PK-mt-afR"/>
+                            <outlet property="delegate" destination="f0K-Kt-K1h" id="Cu2-oy-u7U"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Сhoose a game" id="82x-5B-2As"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="t4o-rl-z71" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1228" y="-1199"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="eCv-Th-RRd">
+            <objects>
+                <navigationController id="qod-kD-n9B" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="gY6-If-Jn1">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="f0K-Kt-K1h" kind="relationship" relationship="rootViewController" id="mWB-hh-pwv"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Fzg-Yc-p6z" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2182" y="-1199"/>
+        </scene>
+        <!--Concentration-->
+        <scene sceneID="3e2-qe-v0X">
+            <objects>
+                <splitViewController id="sdd-v8-vjd" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Concentration" image="icons8-spotlight-50" id="eC2-Uk-bbc"/>
+                    <connections>
+                        <segue destination="qod-kD-n9B" kind="relationship" relationship="masterViewController" id="WEP-Mp-Kos"/>
+                        <segue destination="7UT-fs-5Vg" kind="relationship" relationship="detailViewController" id="RMR-zL-YLA"/>
+                    </connections>
+                </splitViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vOJ-Y2-TyJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-3246" y="-879"/>
+        </scene>
+        <!--Concentration View Controller-->
+        <scene sceneID="fAw-ku-OaB">
+            <objects>
+                <viewController id="7UT-fs-5Vg" customClass="ConcentrationViewController" customModule="SetGame" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="jL6-EH-bDD">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="gVe-1U-DuU">
+                                <rect key="frame" x="16" y="84" width="343" height="514"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="xXG-4Y-28B">
+                                        <rect key="frame" x="0.0" y="0.0" width="343" height="408.5"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="40s-zI-VwR">
+                                                <rect key="frame" x="0.0" y="0.0" width="343" height="96"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="S2o-zV-x9q">
+                                                        <rect key="frame" x="0.0" y="0.0" width="80" height="96"/>
+                                                        <color key="backgroundColor" red="0.43794663560000002" green="1" blue="0.44731962759999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                                <integer key="value" value="20"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                        <connections>
+                                                            <action selector="tapCard:" destination="7UT-fs-5Vg" eventType="touchUpInside" id="7nt-gc-jXI"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="p5v-HT-LRC">
+                                                        <rect key="frame" x="88" y="0.0" width="79.5" height="96"/>
+                                                        <color key="backgroundColor" red="0.43794663560000002" green="1" blue="0.44731962759999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                                <integer key="value" value="20"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                        <connections>
+                                                            <action selector="tapCard:" destination="7UT-fs-5Vg" eventType="touchUpInside" id="2hU-i6-j5K"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gbj-iz-1kV">
+                                                        <rect key="frame" x="175.5" y="0.0" width="80" height="96"/>
+                                                        <color key="backgroundColor" red="0.43794663560000002" green="1" blue="0.44731962759999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                                <integer key="value" value="20"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                        <connections>
+                                                            <action selector="tapCard:" destination="7UT-fs-5Vg" eventType="touchUpInside" id="jFZ-XF-K52"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UX2-nd-xNM">
+                                                        <rect key="frame" x="263.5" y="0.0" width="79.5" height="96"/>
+                                                        <color key="backgroundColor" red="0.43794663560000002" green="1" blue="0.44731962759999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                                <integer key="value" value="20"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                        <connections>
+                                                            <action selector="tapCard:" destination="7UT-fs-5Vg" eventType="touchUpInside" id="qeY-NO-g1N"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="74x-IB-Y5L">
+                                                <rect key="frame" x="0.0" y="104" width="343" height="96.5"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4tB-nS-L6P">
+                                                        <rect key="frame" x="0.0" y="0.0" width="80" height="96.5"/>
+                                                        <color key="backgroundColor" red="0.43794663560000002" green="1" blue="0.44731962759999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                                <integer key="value" value="20"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                        <connections>
+                                                            <action selector="tapCard:" destination="7UT-fs-5Vg" eventType="touchUpInside" id="B2i-D9-BKb"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="T6h-uN-ocM">
+                                                        <rect key="frame" x="88" y="0.0" width="79.5" height="96.5"/>
+                                                        <color key="backgroundColor" red="0.43794663560000002" green="1" blue="0.44731962759999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                                <integer key="value" value="20"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                        <connections>
+                                                            <action selector="tapCard:" destination="7UT-fs-5Vg" eventType="touchUpInside" id="ec1-7G-AZx"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0IR-Q1-XBo">
+                                                        <rect key="frame" x="175.5" y="0.0" width="80" height="96.5"/>
+                                                        <color key="backgroundColor" red="0.43794663560000002" green="1" blue="0.44731962759999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                                <integer key="value" value="20"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                        <connections>
+                                                            <action selector="tapCard:" destination="7UT-fs-5Vg" eventType="touchUpInside" id="0dI-xT-hOn"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nVy-65-S8Y">
+                                                        <rect key="frame" x="263.5" y="0.0" width="79.5" height="96.5"/>
+                                                        <color key="backgroundColor" red="0.43794663560000002" green="1" blue="0.44731962759999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                                <integer key="value" value="20"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                        <connections>
+                                                            <action selector="tapCard:" destination="7UT-fs-5Vg" eventType="touchUpInside" id="0xL-v3-rkz"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="1cI-bm-TOB">
+                                                <rect key="frame" x="0.0" y="208.5" width="343" height="96"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="r9D-94-9e4">
+                                                        <rect key="frame" x="0.0" y="0.0" width="80" height="96"/>
+                                                        <color key="backgroundColor" red="0.43794663560000002" green="1" blue="0.44731962759999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                                <integer key="value" value="20"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                        <connections>
+                                                            <action selector="tapCard:" destination="7UT-fs-5Vg" eventType="touchUpInside" id="DZ4-Ig-iVj"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tlh-5n-F4M">
+                                                        <rect key="frame" x="88" y="0.0" width="79.5" height="96"/>
+                                                        <color key="backgroundColor" red="0.43794663560000002" green="1" blue="0.44731962759999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                                <integer key="value" value="20"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                        <connections>
+                                                            <action selector="tapCard:" destination="7UT-fs-5Vg" eventType="touchUpInside" id="XS2-ag-mfl"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VLq-Sf-vL5">
+                                                        <rect key="frame" x="175.5" y="0.0" width="80" height="96"/>
+                                                        <color key="backgroundColor" red="0.43794663560000002" green="1" blue="0.44731962759999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                                <integer key="value" value="20"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                        <connections>
+                                                            <action selector="tapCard:" destination="7UT-fs-5Vg" eventType="touchUpInside" id="8F6-OS-H75"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ai2-Gq-yza">
+                                                        <rect key="frame" x="263.5" y="0.0" width="79.5" height="96"/>
+                                                        <color key="backgroundColor" red="0.43794663560000002" green="1" blue="0.44731962759999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                                <integer key="value" value="20"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                        <connections>
+                                                            <action selector="tapCard:" destination="7UT-fs-5Vg" eventType="touchUpInside" id="b9o-Rj-iM7"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="Rfu-5h-eJ7">
+                                                <rect key="frame" x="0.0" y="312.5" width="343" height="96"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="md1-PD-DnA">
+                                                        <rect key="frame" x="0.0" y="0.0" width="80" height="96"/>
+                                                        <color key="backgroundColor" red="0.43794663560000002" green="1" blue="0.44731962759999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                                <integer key="value" value="20"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                        <connections>
+                                                            <action selector="tapCard:" destination="7UT-fs-5Vg" eventType="touchUpInside" id="opa-XP-S5K"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="p2a-gg-kd0">
+                                                        <rect key="frame" x="88" y="0.0" width="79.5" height="96"/>
+                                                        <color key="backgroundColor" red="0.43794663560000002" green="1" blue="0.44731962759999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                                <integer key="value" value="20"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                        <connections>
+                                                            <action selector="tapCard:" destination="7UT-fs-5Vg" eventType="touchUpInside" id="jZg-kp-JGE"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2gx-hw-X8g">
+                                                        <rect key="frame" x="175.5" y="0.0" width="80" height="96"/>
+                                                        <color key="backgroundColor" red="0.43794663560000002" green="1" blue="0.44731962759999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                                <integer key="value" value="20"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                        <connections>
+                                                            <action selector="tapCard:" destination="7UT-fs-5Vg" eventType="touchUpInside" id="ndn-cW-qVS"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HDx-VN-aLy">
+                                                        <rect key="frame" x="263.5" y="0.0" width="79.5" height="96"/>
+                                                        <color key="backgroundColor" red="0.43794663560000002" green="1" blue="0.44731962759999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                                <integer key="value" value="20"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                        <connections>
+                                                            <action selector="tapCard:" destination="7UT-fs-5Vg" eventType="touchUpInside" id="MmO-hH-Hbm"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="layer.backgroundColor">
+                                                <color key="value" red="0.88821072050000005" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="fNk-I5-F1x">
+                                        <rect key="frame" x="0.0" y="416.5" width="343" height="97.5"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Record" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N9m-Me-7dT">
+                                                <rect key="frame" x="0.0" y="0.0" width="343" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="17"/>
+                                                <color key="textColor" red="0.43794663560000002" green="1" blue="0.44731962759999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                                <variation key="heightClass=regular-widthClass=regular">
+                                                    <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="50"/>
+                                                </variation>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Flip" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Md-PO-xFK">
+                                                <rect key="frame" x="0.0" y="21.5" width="343" height="21.5"/>
+                                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="18"/>
+                                                <color key="textColor" red="0.43794663560000002" green="1" blue="0.44731962759999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                                <variation key="heightClass=regular-widthClass=regular">
+                                                    <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="50"/>
+                                                </variation>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Score" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TMI-YF-ilG">
+                                                <rect key="frame" x="0.0" y="44" width="343" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="17"/>
+                                                <color key="textColor" red="0.43794663560000002" green="1" blue="0.44731962759999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                                <variation key="heightClass=regular-widthClass=regular">
+                                                    <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="50"/>
+                                                </variation>
+                                            </label>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Uuo-tO-MHB">
+                                                <rect key="frame" x="0.0" y="65.5" width="343" height="32"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                <state key="normal" title="Start new game">
+                                                    <color key="titleColor" red="0.43794663560000002" green="1" blue="0.44731962759999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <variation key="heightClass=regular-widthClass=regular">
+                                                    <fontDescription key="fontDescription" type="system" pointSize="50"/>
+                                                </variation>
+                                                <connections>
+                                                    <action selector="startNewGame:" destination="7UT-fs-5Vg" eventType="touchUpInside" id="AyM-H4-bSL"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <variation key="heightClass=compact-widthClass=compact" axis="horizontal"/>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="dgx-gp-J8V" firstAttribute="trailing" secondItem="gVe-1U-DuU" secondAttribute="trailing" constant="16" id="JCZ-fa-e90"/>
+                            <constraint firstItem="gVe-1U-DuU" firstAttribute="top" secondItem="dgx-gp-J8V" secondAttribute="top" constant="20" id="R5F-dg-ZZ6"/>
+                            <constraint firstItem="gVe-1U-DuU" firstAttribute="leading" secondItem="dgx-gp-J8V" secondAttribute="leading" constant="16" id="i5w-tl-w6w"/>
+                            <constraint firstItem="dgx-gp-J8V" firstAttribute="bottom" secondItem="gVe-1U-DuU" secondAttribute="bottom" constant="20" id="m6a-HK-iAJ"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="dgx-gp-J8V"/>
+                    </view>
+                    <connections>
+                        <outlet property="flipCountLabel" destination="3Md-PO-xFK" id="cNE-Lu-9h5"/>
+                        <outlet property="recordLabel" destination="N9m-Me-7dT" id="Fkb-vE-BHe"/>
+                        <outlet property="scoreLabel" destination="TMI-YF-ilG" id="mEO-gs-jqM"/>
+                        <outlet property="startNewGameButton" destination="Uuo-tO-MHB" id="GbU-mh-kGD"/>
+                        <outletCollection property="cardsCollection" destination="Ai2-Gq-yza" collectionClass="NSMutableArray" id="cw2-MC-WDx"/>
+                        <outletCollection property="cardsCollection" destination="VLq-Sf-vL5" collectionClass="NSMutableArray" id="nFB-Ek-j0X"/>
+                        <outletCollection property="cardsCollection" destination="UX2-nd-xNM" collectionClass="NSMutableArray" id="3lc-xH-iYm"/>
+                        <outletCollection property="cardsCollection" destination="T6h-uN-ocM" collectionClass="NSMutableArray" id="Bgv-Nz-DfW"/>
+                        <outletCollection property="cardsCollection" destination="HDx-VN-aLy" collectionClass="NSMutableArray" id="W0u-d6-y8e"/>
+                        <outletCollection property="cardsCollection" destination="r9D-94-9e4" collectionClass="NSMutableArray" id="c8U-np-prl"/>
+                        <outletCollection property="cardsCollection" destination="2gx-hw-X8g" collectionClass="NSMutableArray" id="yHG-g1-bSp"/>
+                        <outletCollection property="cardsCollection" destination="S2o-zV-x9q" collectionClass="NSMutableArray" id="Vg3-hW-Eqg"/>
+                        <outletCollection property="cardsCollection" destination="Tlh-5n-F4M" collectionClass="NSMutableArray" id="M8b-dI-7pk"/>
+                        <outletCollection property="cardsCollection" destination="p5v-HT-LRC" collectionClass="NSMutableArray" id="JvZ-e6-xlj"/>
+                        <outletCollection property="cardsCollection" destination="4tB-nS-L6P" collectionClass="NSMutableArray" id="1yR-nn-oaj"/>
+                        <outletCollection property="cardsCollection" destination="0IR-Q1-XBo" collectionClass="NSMutableArray" id="rAO-qx-xB1"/>
+                        <outletCollection property="cardsCollection" destination="p2a-gg-kd0" collectionClass="NSMutableArray" id="juh-ad-b9v"/>
+                        <outletCollection property="cardsCollection" destination="md1-PD-DnA" collectionClass="NSMutableArray" id="9Dv-W3-jVL"/>
+                        <outletCollection property="cardsCollection" destination="nVy-65-S8Y" collectionClass="NSMutableArray" id="yON-Di-bJZ"/>
+                        <outletCollection property="cardsCollection" destination="Gbj-iz-1kV" collectionClass="NSMutableArray" id="r59-mN-Lhb"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ItO-MT-Rg9" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2184.057971014493" y="-408.42391304347831"/>
+        </scene>
+        <!--Set-->
+        <scene sceneID="ibF-ES-N9P">
+            <objects>
+                <viewController id="J6N-GN-JMn" customClass="ViewController" customModule="SetGame" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="bNW-dE-ZQ6">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="rfb-XV-EMR">
+                                <rect key="frame" x="16" y="40" width="343" height="558"/>
+                                <subviews>
+                                    <view multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1yf-aT-xUg">
+                                        <rect key="frame" x="0.0" y="0.0" width="343" height="468"/>
+                                        <color key="backgroundColor" red="0.68506723642349243" green="0.24347275495529175" blue="0.70190989971160889" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </view>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="equalCentering" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="SvP-9x-wlp">
+                                        <rect key="frame" x="0.0" y="478" width="343" height="80"/>
+                                        <subviews>
+                                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="characterWrap" translatesAutoresizingMaskIntoConstraints="NO" id="FpC-u6-mCS">
+                                                <rect key="frame" x="0.0" y="0.0" width="57" height="80"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="FpC-u6-mCS" secondAttribute="height" multiplier="5:7" id="1zp-3s-zgv"/>
+                                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="80" id="kPf-8U-qEm"/>
+                                                </constraints>
+                                                <state key="normal" title="A" image="HCT-cardback">
+                                                    <color key="titleColor" red="1" green="0.24114965720000001" blue="0.2434536044" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                        <integer key="value" value="5"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
+                                                        <integer key="value" value="2"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="layer.borderColor">
+                                                        <color key="value" red="0.98023837800000002" green="0.91063535210000002" blue="0.30291730169999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="addCardsButton:" destination="J6N-GN-JMn" eventType="touchUpInside" id="47E-ea-9g8"/>
+                                                </connections>
+                                            </button>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalCentering" translatesAutoresizingMaskIntoConstraints="NO" id="cfl-oE-tbJ">
+                                                <rect key="frame" x="83" y="0.0" width="177" height="80"/>
+                                                <subviews>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="emo-gr-0GV">
+                                                        <rect key="frame" x="0.0" y="0.0" width="177" height="50"/>
+                                                        <subviews>
+                                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZSV-Tk-Fff">
+                                                                <rect key="frame" x="0.0" y="0.0" width="57" height="50"/>
+                                                                <color key="backgroundColor" red="0.93310481310000004" green="0.97016543150000001" blue="0.30783650280000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                <userDefinedRuntimeAttributes>
+                                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                                        <integer key="value" value="4"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                </userDefinedRuntimeAttributes>
+                                                            </view>
+                                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="I7A-mU-bqs">
+                                                                <rect key="frame" x="60" y="0.0" width="57" height="50"/>
+                                                                <color key="backgroundColor" red="0.93310481310000004" green="0.97016543150000001" blue="0.30783650280000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                <userDefinedRuntimeAttributes>
+                                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                                        <integer key="value" value="4"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                </userDefinedRuntimeAttributes>
+                                                            </view>
+                                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8jd-sX-7Jx">
+                                                                <rect key="frame" x="120" y="0.0" width="57" height="50"/>
+                                                                <color key="backgroundColor" red="0.93310481310000004" green="0.97016543150000001" blue="0.30783650280000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                <userDefinedRuntimeAttributes>
+                                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                                        <integer key="value" value="4"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                </userDefinedRuntimeAttributes>
+                                                            </view>
+                                                        </subviews>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="50" id="Y78-ej-UcG"/>
+                                                        </constraints>
+                                                        <variation key="heightClass=compact-widthClass=compact" axis="vertical"/>
+                                                    </stackView>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="HNF-lk-nSs">
+                                                        <rect key="frame" x="0.0" y="50" width="177" height="30"/>
+                                                        <subviews>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f61-Vv-DJs">
+                                                                <rect key="frame" x="0.0" y="0.0" width="86" height="30"/>
+                                                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="16"/>
+                                                                <state key="normal" title="Find set">
+                                                                    <color key="titleColor" red="1" green="0.24114965720000001" blue="0.2434536044" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                </state>
+                                                                <variation key="heightClass=compact-widthClass=compact">
+                                                                    <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="12"/>
+                                                                </variation>
+                                                                <connections>
+                                                                    <action selector="findSetButton:" destination="J6N-GN-JMn" eventType="touchUpInside" id="l5B-9A-ieQ"/>
+                                                                </connections>
+                                                            </button>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fHf-ei-5ol">
+                                                                <rect key="frame" x="91" y="0.0" width="86" height="30"/>
+                                                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="15"/>
+                                                                <state key="normal" title="New game">
+                                                                    <color key="titleColor" red="1" green="0.24114965720000001" blue="0.2434536044" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                </state>
+                                                                <variation key="heightClass=compact-widthClass=compact">
+                                                                    <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="10"/>
+                                                                </variation>
+                                                                <connections>
+                                                                    <action selector="startNewGameButton:" destination="J6N-GN-JMn" eventType="touchUpInside" id="QIT-qG-8ZK"/>
+                                                                </connections>
+                                                            </button>
+                                                        </subviews>
+                                                        <variation key="heightClass=compact-widthClass=compact" axis="vertical"/>
+                                                    </stackView>
+                                                </subviews>
+                                                <variation key="heightClass=compact-widthClass=compact" axis="vertical"/>
+                                            </stackView>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="trash_can_PNG18476" translatesAutoresizingMaskIntoConstraints="NO" id="wKF-RS-gvB">
+                                                <rect key="frame" x="286" y="0.0" width="57" height="80"/>
+                                            </imageView>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="wKF-RS-gvB" firstAttribute="width" secondItem="FpC-u6-mCS" secondAttribute="width" id="5p4-Y8-Lbi"/>
+                                            <constraint firstItem="wKF-RS-gvB" firstAttribute="height" secondItem="FpC-u6-mCS" secondAttribute="height" id="gGs-Ho-5AX"/>
+                                        </constraints>
+                                        <variation key="heightClass=compact-widthClass=compact" axis="vertical"/>
+                                    </stackView>
+                                </subviews>
+                                <variation key="heightClass=compact-widthClass=compact" axis="horizontal"/>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.6850672364" green="0.24347275500000001" blue="0.70190989969999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="jyY-TY-mnM" firstAttribute="bottom" secondItem="rfb-XV-EMR" secondAttribute="bottom" constant="20" id="AMz-XF-z0o"/>
+                            <constraint firstItem="rfb-XV-EMR" firstAttribute="leading" secondItem="jyY-TY-mnM" secondAttribute="leading" constant="16" id="c4n-zt-V6h"/>
+                            <constraint firstItem="rfb-XV-EMR" firstAttribute="top" secondItem="jyY-TY-mnM" secondAttribute="top" constant="20" id="gqF-Za-hNi"/>
+                            <constraint firstItem="jyY-TY-mnM" firstAttribute="trailing" secondItem="rfb-XV-EMR" secondAttribute="trailing" constant="16" id="qd5-HX-SCU"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="jyY-TY-mnM"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Set" image="icons8-gears-50" id="9uY-SN-2UO"/>
+                    <navigationItem key="navigationItem" id="Mbj-OA-UwU"/>
+                    <connections>
+                        <outlet property="addCards" destination="FpC-u6-mCS" id="daT-bV-E9y"/>
+                        <outlet property="newGameButton" destination="FpC-u6-mCS" id="KDX-3s-3hm"/>
+                        <outlet property="tableOfGameView" destination="1yf-aT-xUg" id="VsD-V6-70p"/>
+                        <outlet property="usedCardsImageView" destination="wKF-RS-gvB" id="LbC-bW-nuy"/>
+                        <outletCollection property="selectedСardViews" destination="ZSV-Tk-Fff" collectionClass="NSMutableArray" id="CUd-az-oKl"/>
+                        <outletCollection property="selectedСardViews" destination="I7A-mU-bqs" collectionClass="NSMutableArray" id="9Is-Xb-QTw"/>
+                        <outletCollection property="selectedСardViews" destination="8jd-sX-7Jx" collectionClass="NSMutableArray" id="pQR-A4-Xk8"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Hzx-gb-N7g" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-3247" y="225"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="HCT-cardback" width="265" height="404"/>
+        <image name="icons8-gears-50" width="37.5" height="37.5"/>
+        <image name="icons8-spotlight-50" width="37.5" height="37.5"/>
+        <image name="trash_can_PNG18476" width="256" height="256"/>
+    </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="x82-1X-76N"/>
+    </inferredMetricsTieBreakers>
+</document>
